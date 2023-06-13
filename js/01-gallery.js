@@ -40,6 +40,7 @@ function onImgClick(event) {
   function onGalleryEsc(event) {
     if (event.code === "Escape") {
       instance.close();
+      window.removeEventListener("keydown", onGalleryEsc);
     }
   }
 }
